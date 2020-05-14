@@ -8,6 +8,7 @@ const products = [
   ]
 
 greaterThanOrEqualTo75 =() => {
+    //filter is an array function which returns all values for which the expression evaluates to "true"
     return products.filter(product => product.price >= 75)
 }
 
@@ -15,6 +16,7 @@ greaterThan1point8 =() => {
     return products.filter(product => product.weight >= 1.8)
 }
 convertToObject=() => {
+    //map is an array function which performs  callback processing for each element in the array
     return products.map((product) => {
         let result ={};
         result[product.id] = {name:product.name,weight:product.weight,price:product.price,size:product.size};
